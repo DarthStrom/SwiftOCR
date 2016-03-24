@@ -10,6 +10,7 @@
 		960F671A1CA3762500FFCAFC /* BankOCR.h in Headers */ = {isa = PBXBuildFile; fileRef = 960F67191CA3762500FFCAFC /* BankOCR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		960F67211CA3762500FFCAFC /* BankOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960F67161CA3762500FFCAFC /* BankOCR.framework */; };
 		960F67261CA3762500FFCAFC /* BankOCRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F67251CA3762500FFCAFC /* BankOCRTests.swift */; };
+		960F67311CA3766B00FFCAFC /* BankOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960F67301CA3766B00FFCAFC /* BankOCR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		960F67201CA3762500FFCAFC /* BankOCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankOCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		960F67251CA3762500FFCAFC /* BankOCRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankOCRTests.swift; sourceTree = "<group>"; };
 		960F67271CA3762500FFCAFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		960F67301CA3766B00FFCAFC /* BankOCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankOCR.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				960F67191CA3762500FFCAFC /* BankOCR.h */,
 				960F671B1CA3762500FFCAFC /* Info.plist */,
+				960F67301CA3766B00FFCAFC /* BankOCR.swift */,
 			);
 			path = BankOCR;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960F67311CA3766B00FFCAFC /* BankOCR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		960F672B1CA3762500FFCAFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kata.BankOCR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		960F672C1CA3762500FFCAFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

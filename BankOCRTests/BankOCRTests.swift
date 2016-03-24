@@ -10,27 +10,15 @@ import XCTest
 @testable import BankOCR
 
 class BankOCRTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    func testCanParseAnAccountNumber() {
+        let accountNumber = "    _  _  _  _  _  _     _ \n" +
+                            "|_||_|| || ||_   |  |  ||_ \n" +
+                            "  | _||_||_||_|  |  |  | _|\n" +
+                            "                           "
+
+        let result = BankOCR.parseNumber(accountNumber)
+
+        XCTAssertEqual(490067715, result)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
